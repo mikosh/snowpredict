@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= favicon_link_tag 'favicon.ico' %>
+    <title>Snowpredict.com - snow reports & ski area weather</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Snow reports and weather forecasts">
+    <meta name="keywords" content="snow reports, weather forecasts, ski conditions, ski areas, ski resorts, Bulgaria, weather information">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+
+  </head>
+
+
+  <body style="background-color: #e3f2fd;">
+
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-faded" style="background-color: #4D9CC5; color:#fff">
+        <a class="navbar-brand" href="https://snowpredict.com" style="color:#FFF; font-size:1.95em" alt="snowpredict.com">
+	    sn<span>&#10052;</span>wpredict.com
+	  </a>
+        
+      </nav>
+    </header>
+
+    <!-- Begin page content -->
+    <main role="main" class="container">
+      <%= yield %>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+          <ul class="adress">
+            <span>Contact</span>
+              <li>
+                <p><b>snowpredict@gmail.com</b></p>
+              </li>    
+            </ul>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+              <ul class="contact">
+                  <span class="">Links</span>  
+                  <a href="https://pamporovo.me/"><%=image_tag "pamporovo.png" %></a>
+                  <a href="http://www.borovets-bg.com/"><%=image_tag "borovets.png" %></a>
+                  <a href="http://www.banskoski.com/"><%=image_tag "bansko-logo.png" %></a> 
+                         
+              </ul>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+              <ul class="social">
+                <span >Social</span>    
+                  <li>
+                    <small style="float: right;color: #fff; padding-right: 10px">2017 © snowpredict.com</small>
+                  </li>
+                </ul>
+          </div>
+          
+        </div>
+        
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </body>
+
+</html>
